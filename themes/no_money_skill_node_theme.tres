@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://moy68pxwg56g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyqt6"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7294118, 0.3647059, 0.3647059, 1)
+corner_detail = 20
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_cyqt6")
+Button/styles/hover = SubResource("StyleBoxFlat_cyqt6")
+Button/styles/normal = SubResource("StyleBoxFlat_cyqt6")
+Button/styles/pressed = SubResource("StyleBoxFlat_cyqt6")

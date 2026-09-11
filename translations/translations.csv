@@ -1,0 +1,18 @@
+key,ru,en
+TEST,Тестовый,Test
+
+MENU,Меню,Menu
+GAME,Играть,Game
+CHANGE_LANG,Сменить Язык,Change Lang
+MAIN_MENU,Главное Меню,Main Menu
+QUIT,Выйти,Quit
+BACK,Обратно,Back
+OPTIONS,Настройки,Options
+CREDITS,Авторы,Credits
+
+CREDITS_DWANG,"[color=ff9500][wave]Dwang[/wave][/color] - Автор, Геймдизайнер, Программист","[color=ff9500][wave]Dwang[/wave][/color] - Creator, Game Designer, Programmer"
+
+VOLUMES,Громкость,Volumes
+MUSIC,Музыка,Music
+SFX,Эффекты,SFX
+UI,Интерфейс,UI

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3wjfj2fwkkh5"]
+
+[ext_resource type="Script" uid="uid://c2qa5svd3e8o2" path="res://scripts/global/refs.gd" id="1_wwdjg"]
+[ext_resource type="PackedScene" uid="uid://pbcebdhvbrig" path="res://scenes/game/game.tscn" id="2_itl1j"]
+[ext_resource type="PackedScene" uid="uid://bsj7cy2hxjvgg" path="res://scenes/main_menu/main_menu.tscn" id="2_j06cu"]
+[ext_resource type="Theme" uid="uid://moy68pxwg56g" path="res://themes/no_money_skill_node_theme.tres" id="3_drppq"]
+[ext_resource type="Theme" uid="uid://ddxxl1ty5sonr" path="res://themes/base_skill_node_theme.tres" id="3_itl1j"]
+[ext_resource type="Theme" uid="uid://7seauictweoa" path="res://themes/max_level_skill_node_theme.tres" id="4_itl1j"]
+[ext_resource type="Texture2D" uid="uid://dd10381lu0tip" path="res://assets/sprites/icon.png" id="6_itl1j"]
+
+[node name="Refs" type="Node" unique_id=649243372]
+script = ExtResource("1_wwdjg")
+main_menu_scene = ExtResource("2_j06cu")
+game_scene = ExtResource("2_itl1j")
+base_skill_node_theme = ExtResource("3_itl1j")
+no_money_skill_node_theme = ExtResource("3_drppq")
+max_level_skill_node_theme = ExtResource("4_itl1j")
+not_enough_money_color = Color(0.7294118, 0.3647059, 0.3647059, 1)
+enough_money_color = Color(0.7254902, 0.8, 0.6784314, 1)
+values_names = Array[String](["money"])
+values_sprites = Array[CompressedTexture2D]([ExtResource("6_itl1j")])

@@ -1,0 +1,379 @@
+[gd_scene format=3 uid="uid://bsj7cy2hxjvgg"]
+
+[ext_resource type="Script" uid="uid://bygdihthpoxmy" path="res://scripts/main_menu/main_menu.gd" id="1_fsom3"]
+[ext_resource type="Theme" uid="uid://cejti4dhwpmp5" path="res://themes/standart_ui_theme.tres" id="2_0ebjn"]
+[ext_resource type="Texture2D" uid="uid://b84gp37rv22fl" path="res://assets/sprites/ui/panel_transparent_center.png" id="3_3ovsr"]
+[ext_resource type="PackedScene" uid="uid://dxn155xsoqpol" path="res://scenes/general/standart_button.tscn" id="3_ob46e"]
+[ext_resource type="FontFile" uid="uid://o5v3xrvb4l34" path="res://assets/fonts/Pangolin-Regular.ttf" id="4_5seab"]
+[ext_resource type="Texture2D" uid="uid://dmnas7fxjyb1a" path="res://assets/sprites/ui/panel_black_100.png" id="6_3ovsr"]
+[ext_resource type="Texture2D" uid="uid://b5eppb4da1652" path="res://assets/sprites/ui/panel_black_200.png" id="6_5seab"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5seab"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("3_3ovsr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xg86"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("6_5seab")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thkx5"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("6_3ovsr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ovsr"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+texture = ExtResource("3_3ovsr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2yjq"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("6_3ovsr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1004237252]
+script = ExtResource("1_fsom3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250245229]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0ebjn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=384561084]
+layout_mode = 2
+size_flags_horizontal = 17
+size_flags_vertical = 17
+theme_override_constants/separation = 4
+
+[node name="TitlePanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=336783577]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 17
+size_flags_vertical = 19
+theme_override_styles/panel = SubResource("StyleBoxTexture_5seab")
+
+[node name="TitleTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/TitlePanel" unique_id=2008418290]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 17
+size_flags_vertical = 17
+stretch_mode = 5
+
+[node name="TitleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TitlePanel" unique_id=996602192]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_5seab")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "GAME_TITLE"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnsContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=109846572]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="OptionsBtn" parent="MarginContainer/VBoxContainer/BtnsContainer1" unique_id=2033958526 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 19
+size_flags_vertical = 4
+text = "OPTIONS"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="CreditsBtn" parent="MarginContainer/VBoxContainer/BtnsContainer1" unique_id=1066360276 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "CREDITS"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="BtnsContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1616305285]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="QuitBtn" parent="MarginContainer/VBoxContainer/BtnsContainer2" unique_id=679361960 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "QUIT"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="GameBtn" parent="MarginContainer/VBoxContainer/BtnsContainer2" unique_id=1436396515 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 19
+size_flags_vertical = 4
+text = "GAME"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="OptionsPanel" type="PanelContainer" parent="MarginContainer" unique_id=1100505409]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+mouse_behavior_recursive = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4xg86")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel" unique_id=853865992]
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/OptionsPanel/VBoxContainer" unique_id=1677864084]
+layout_mode = 2
+size_flags_horizontal = 19
+size_flags_vertical = 19
+theme_override_styles/panel = SubResource("StyleBoxTexture_thkx5")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer" unique_id=338950420]
+layout_mode = 2
+size_flags_horizontal = 17
+size_flags_vertical = 19
+mouse_filter = 0
+mouse_behavior_recursive = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer" unique_id=1599962638]
+layout_mode = 2
+size_flags_horizontal = 19
+size_flags_vertical = 19
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 4
+
+[node name="VolumePanelContainer" type="PanelContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" unique_id=2110867620]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_3ovsr")
+
+[node name="VolumeVBoxContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer" unique_id=884151473]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="VolumesLabel" type="RichTextLabel" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer" unique_id=1733709927]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "VOLUMES"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer" unique_id=997617011]
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="MusicContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=842038681]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="MusicVolumeLabel" type="RichTextLabel" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer" unique_id=1375567040]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "MUSIC"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MusicHSlider" type="HSlider" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer" unique_id=1974487267]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="SFXContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=2011402373]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="SFXLabel" type="RichTextLabel" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer" unique_id=1486722396]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "SFX"
+fit_content = true
+autowrap_mode = 0
+
+[node name="SFXHSlider" type="HSlider" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer" unique_id=1443481584]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="UIContainer" type="VBoxContainer" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=678658359]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="UILabel" type="RichTextLabel" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer" unique_id=1661531414]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "UI"
+fit_content = true
+autowrap_mode = 0
+
+[node name="UIHSlider" type="HSlider" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer" unique_id=327970204]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="ChangeLangBtn" parent="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1800530540 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CHANGE_LANG"
+
+[node name="OptionsBackBtn" parent="MarginContainer/OptionsPanel/VBoxContainer" unique_id=1306814889 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "BACK"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="CreditsPanel" type="PanelContainer" parent="MarginContainer" unique_id=730980691]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_4xg86")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CreditsPanel" unique_id=641428607]
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/CreditsPanel/VBoxContainer" unique_id=1416548]
+layout_mode = 2
+size_flags_vertical = 19
+theme_override_styles/panel = SubResource("StyleBoxTexture_x2yjq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CreditsPanel/VBoxContainer/PanelContainer" unique_id=885625000]
+layout_mode = 2
+
+[node name="Credits" type="RichTextLabel" parent="MarginContainer/CreditsPanel/VBoxContainer/PanelContainer/VBoxContainer" unique_id=340819168]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 64
+text = "CREDITS"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CreditsPanel/VBoxContainer/PanelContainer/VBoxContainer" unique_id=247260627]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CreditsDwang" type="RichTextLabel" parent="MarginContainer/CreditsPanel/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1849448582]
+layout_mode = 2
+bbcode_enabled = true
+text = "CREDITS_DWANG"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsBackBtn" parent="MarginContainer/CreditsPanel/VBoxContainer" unique_id=2125124574 instance=ExtResource("3_ob46e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "BACK"
+start_anim_type = 2
+end_anim_type = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnsContainer1/OptionsBtn" to="." method="_on_options_btn_pressed" flags=3]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnsContainer1/CreditsBtn" to="." method="_on_credits_btn_pressed" flags=3]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnsContainer2/QuitBtn" to="." method="_on_quit_btn_pressed" flags=3]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnsContainer2/GameBtn" to="." method="_on_game_btn_pressed" flags=3]
+[connection signal="value_changed" from="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer/SFXHSlider" to="." method="_on_sfxh_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer/UIHSlider" to="." method="_on_uih_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/OptionsPanel/VBoxContainer/PanelContainer/ScrollContainer/VBoxContainer/ChangeLangBtn" to="." method="_on_change_lang_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/OptionsPanel/VBoxContainer/OptionsBackBtn" to="." method="_on_options_back_btn_pressed" flags=3]
+[connection signal="pressed" from="MarginContainer/CreditsPanel/VBoxContainer/CreditsBackBtn" to="." method="_on_credits_back_btn_pressed" flags=3]

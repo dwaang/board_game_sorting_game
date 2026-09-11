@@ -1,0 +1,10 @@
+{
+  "sendAnalyticsEvents": false,
+  "disableLoadingLogo": true,
+  "device": {
+    "supportedOrientations": [
+      "portrait",
+      "landscape"
+    ]
+  }
+}

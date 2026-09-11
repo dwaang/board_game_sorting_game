@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://uf6kichf72p3"]
+
+[ext_resource type="Script" uid="uid://h4xmkqn51djd" path="res://scripts/skill_tree/skill_node.gd" id="1_fqwa5"]
+[ext_resource type="PackedScene" uid="uid://dxn155xsoqpol" path="res://scenes/general/standart_button.tscn" id="2_ub6so"]
+[ext_resource type="PackedScene" uid="uid://6j3lwbwfdsdr" path="res://scenes/skill_tree/skill_node_tooltip.tscn" id="3_ktan2"]
+[ext_resource type="Theme" uid="uid://ddxxl1ty5sonr" path="res://themes/base_skill_node_theme.tres" id="3_uuxl8"]
+
+[node name="SkillNode" type="Node2D" unique_id=1520642554 groups=["skillnodes"]]
+script = ExtResource("1_fqwa5")
+
+[node name="Button" parent="." unique_id=2033958526 instance=ExtResource("2_ub6so")]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(96, 96)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_uuxl8")
+
+[node name="SkillNodeTooltip" parent="." unique_id=1911941759 instance=ExtResource("3_ktan2")]
+unique_name_in_owner = true
+z_index = 720
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+
+[node name="ChildLine" type="Line2D" parent="." unique_id=1470389048]
+unique_name_in_owner = true
+z_as_relative = false
+width = 8.0
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

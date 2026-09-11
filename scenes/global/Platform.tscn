@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dgc6k0ed4v3q0"]
+
+[ext_resource type="Script" uid="uid://bxnqu4xvoat18" path="res://scripts/global/platform.gd" id="1_jbi5o"]
+[ext_resource type="Script" uid="uid://c1b0xylgonkql" path="res://scripts/platform/steam_api.gd" id="3_lgtdi"]
+[ext_resource type="Script" uid="uid://cl2v7p34k6ut7" path="res://scripts/platform/data_provider.gd" id="4_w5vhr"]
+
+[node name="Platform" type="Node" unique_id=169860947]
+script = ExtResource("1_jbi5o")
+
+[node name="SteamAPI" type="Node" parent="." unique_id=1834498557]
+unique_name_in_owner = true
+script = ExtResource("3_lgtdi")
+is_active = true
+
+[node name="DataProvider" type="Node" parent="." unique_id=1657667204]
+unique_name_in_owner = true
+script = ExtResource("4_w5vhr")

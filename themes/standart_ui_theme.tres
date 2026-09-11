@@ -1,0 +1,130 @@
+[gd_resource type="Theme" format=3 uid="uid://cejti4dhwpmp5"]
+
+[ext_resource type="Texture2D" uid="uid://bq2fn0kvhmnju" path="res://assets/sprites/ui/panel_transparent_center_border.png" id="1_rnmte"]
+[ext_resource type="Texture2D" uid="uid://bbskiq3fkaijj" path="res://assets/sprites/ui/panel_white_100.png" id="2_hyhnp"]
+[ext_resource type="Texture2D" uid="uid://cbpa3nbeepevg" path="res://assets/sprites/ui/panel_white_25.png" id="3_cm17k"]
+[ext_resource type="Texture2D" uid="uid://bxojce5u7220x" path="res://assets/sprites/ui/panel_black_50.png" id="3_qeyv0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hyhnp"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+texture = ExtResource("1_rnmte")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnmte"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+texture = ExtResource("2_hyhnp")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ym2rd"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+texture = ExtResource("3_cm17k")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="Gradient" id="Gradient_8hsir"]
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8hsir"]
+gradient = SubResource("Gradient_8hsir")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3b0h"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8hsir"]
+color = Color(0, 0, 0, 0.39215687)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 64
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07hio"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("3_qeyv0")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_hyhnp"]
+color = Color(0.5, 0.5, 0.5, 1)
+thickness = 24
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qeyv0"]
+color = Color(1, 1, 1, 1)
+thickness = 24
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5seab"]
+color = Color(1, 1, 1, 0.19607843)
+thickness = 24
+vertical = true
+
+[resource]
+Button/colors/font_color = Color(0.8, 0.8, 0.8, 1)
+Button/colors/font_disabled_color = Color(0.87, 0.87, 0.87, 0.5882353)
+Button/colors/font_focus_color = Color(0.8, 0.8, 0.8, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.1, 0.1, 0.1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.5882353)
+Button/colors/icon_focus_color = Color(0.8, 0.8, 0.8, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(0.8, 0.8, 0.8, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/icon_max_width = 48
+Button/constants/line_spacing = -4
+Button/constants/outline_size = 16
+Button/font_sizes/font_size = 40
+Button/styles/disabled = SubResource("StyleBoxTexture_hyhnp")
+Button/styles/hover = SubResource("StyleBoxTexture_rnmte")
+Button/styles/normal = SubResource("StyleBoxTexture_ym2rd")
+Button/styles/pressed = SubResource("StyleBoxTexture_rnmte")
+HBoxContainer/constants/separation = 16
+HSlider/icons/grabber = SubResource("GradientTexture2D_8hsir")
+HSlider/icons/grabber_disabled = SubResource("GradientTexture2D_8hsir")
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_8hsir")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_e3b0h")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_e3b0h")
+HSlider/styles/slider = SubResource("StyleBoxLine_8hsir")
+MarginContainer/constants/margin_bottom = 16
+MarginContainer/constants/margin_left = 16
+MarginContainer/constants/margin_right = 16
+MarginContainer/constants/margin_top = 16
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_07hio")
+RichTextLabel/colors/default_color = Color(0.8, 0.8, 0.8, 1)
+RichTextLabel/colors/font_outline_color = Color(0.1, 0.1, 0.1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.1, 0.1, 0.1, 1)
+RichTextLabel/constants/outline_size = 16
+RichTextLabel/constants/shadow_offset_x = 2
+RichTextLabel/constants/shadow_offset_y = 2
+RichTextLabel/constants/shadow_outline_size = 16
+RichTextLabel/font_sizes/normal_font_size = 40
+ScrollContainer/constants/scrollbar_h_separation = 8
+VBoxContainer/constants/separation = 16
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_hyhnp")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxLine_qeyv0")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxLine_qeyv0")
+VScrollBar/styles/scroll = SubResource("StyleBoxLine_5seab")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxLine_5seab")

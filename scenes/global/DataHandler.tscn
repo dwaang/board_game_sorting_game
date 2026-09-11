@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b8ktu1lf4a8gt"]
+
+[ext_resource type="Script" uid="uid://dprji63aq5mc5" path="res://scripts/global/data_handler.gd" id="1_rwnsb"]
+
+[node name="DataHandler" type="Node" unique_id=1798329527]
+script = ExtResource("1_rwnsb")

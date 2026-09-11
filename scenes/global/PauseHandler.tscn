@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bmuknpgpjrg6k"]
+
+[ext_resource type="Script" uid="uid://dm4myftofpyei" path="res://scripts/global/pause_handler.gd" id="1_g53rj"]
+
+[node name="PauseHandler" type="Node" unique_id=1887817718]
+process_mode = 3
+physics_interpolation_mode = 1
+script = ExtResource("1_g53rj")

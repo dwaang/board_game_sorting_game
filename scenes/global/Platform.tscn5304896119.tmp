@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dgc6k0ed4v3q0"]
+
+[ext_resource type="Script" uid="uid://bxnqu4xvoat18" path="res://scripts/global/platform.gd" id="1_jbi5o"]
+[ext_resource type="Script" uid="uid://c83u0pb6iogv3" path="res://resources/data/data.gd" id="2_jbi5o"]
+[ext_resource type="Script" uid="uid://c1b0xylgonkql" path="res://scripts/general/steam_api.gd" id="3_lgtdi"]
+[ext_resource type="Script" uid="uid://cl2v7p34k6ut7" path="res://scripts/general/web_sdk.gd" id="4_w5vhr"]
+
+[sub_resource type="Resource" id="Resource_w5vhr"]
+script = ExtResource("2_jbi5o")
+metadata/_custom_type_script = "uid://c83u0pb6iogv3"
+
+[node name="Platform" type="Node" unique_id=169860947]
+script = ExtResource("1_jbi5o")
+
+[node name="SteamAPI" type="Node" parent="." unique_id=1834498557]
+unique_name_in_owner = true
+script = ExtResource("3_lgtdi")
+
+[node name="TimeCheckTimer" type="Timer" parent="SteamAPI" unique_id=980310260]
+unique_name_in_owner = true
+
+[node name="WebSDK" type="Node" parent="." unique_id=1657667204]
+unique_name_in_owner = true
+script = ExtResource("4_w5vhr")
+default_save = SubResource("Resource_w5vhr")
+interstitial_time = 240.0
+main_leaderboard_id = "best"
+
+[node name="SaveTimer" type="Timer" parent="WebSDK" unique_id=1595643269]
+unique_name_in_owner = true
+
+[node name="InterstitialTimer" type="Timer" parent="WebSDK" unique_id=2146874691]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="SteamAPI/TimeCheckTimer" to="SteamAPI" method="_on_timer_timeout"]
+[connection signal="timeout" from="WebSDK/SaveTimer" to="WebSDK" method="_on_save_timer_timeout"]

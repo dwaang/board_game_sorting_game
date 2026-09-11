@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://pbcebdhvbrig"]
+
+[ext_resource type="Script" uid="uid://bd5p764savryr" path="res://scripts/game/game.gd" id="1_hdoy7"]
+[ext_resource type="Script" uid="uid://lbdmxrnvew5h" path="res://scripts/game/hud_handler.gd" id="2_kelw5"]
+[ext_resource type="PackedScene" uid="uid://dxn155xsoqpol" path="res://scenes/general/standart_button.tscn" id="2_l8u7j"]
+[ext_resource type="Theme" uid="uid://cejti4dhwpmp5" path="res://themes/standart_ui_theme.tres" id="2_whik6"]
+
+[node name="Game" type="Node2D" unique_id=93356401]
+script = ExtResource("1_hdoy7")
+
+[node name="HUDHandler" type="Node" parent="." unique_id=1009556471]
+unique_name_in_owner = true
+script = ExtResource("2_kelw5")
+
+[node name="HUDCanvas" type="CanvasLayer" parent="." unique_id=133048354]
+unique_name_in_owner = true
+layer = 10
+
+[node name="MarginUIContainer" type="MarginContainer" parent="HUDCanvas" unique_id=1612345414]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme = ExtResource("2_whik6")
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TopUIContainer" type="HBoxContainer" parent="HUDCanvas/MarginUIContainer" unique_id=1025980105]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+alignment = 2
+
+[node name="MenuBtn" parent="HUDCanvas/MarginUIContainer/TopUIContainer" unique_id=2033958526 instance=ExtResource("2_l8u7j")]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 2
+text = "MENU"
+
+[connection signal="pressed" from="HUDCanvas/MarginUIContainer/TopUIContainer/MenuBtn" to="HUDHandler" method="_on_menu_btn_pressed"]

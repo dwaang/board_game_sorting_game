@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://1xi766hfay2m"]
+
+[ext_resource type="Script" uid="uid://dpofk6dvr2ifc" path="res://scripts/main/main.gd" id="1_6q06x"]
+[ext_resource type="Shader" uid="uid://bgv0cgwts1hwc" path="res://shaders/bg_scrolling_grid.gdshader" id="2_ow5a4"]
+[ext_resource type="Script" uid="uid://nrkk86av5fll" path="res://scripts/general/camera.gd" id="3_hujxm"]
+[ext_resource type="Shader" uid="uid://dwyn13lxbi0it" path="res://shaders/vhs_crt_broadcast.gdshader" id="4_yyfjg"]
+[ext_resource type="PackedScene" uid="uid://df02vhinmdmob" path="res://scenes/main/pause_menu.tscn" id="5_b1x3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_btprj"]
+shader = ExtResource("2_ow5a4")
+shader_parameter/cell_size = 128.0
+shader_parameter/speed = Vector2(0.1, 0.1)
+shader_parameter/angle_degrees = -2.9999915925000096
+shader_parameter/enable_lines = false
+shader_parameter/line_thickness = 0.05
+shader_parameter/grid_color = Color(0.2, 0.6, 1, 1)
+shader_parameter/background_color = Color(0.13625, 0.135, 0.15, 1)
+shader_parameter/alternate_color = Color(0.12716667, 0.126, 0.14, 1)
+
+[sub_resource type="Environment" id="Environment_07hio"]
+background_mode = 3
+background_canvas_max_layer = 100
+tonemap_mode = 3
+tonemap_exposure = 1.1
+glow_enabled = true
+glow_intensity = 0.5
+glow_hdr_threshold = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_th32y"]
+shader = ExtResource("4_yyfjg")
+shader_parameter/pixel_size = 0.0
+shader_parameter/lod_blur = 0.0
+shader_parameter/chroma_offset_px = 0.10000000475
+shader_parameter/saturation = 1.10000005225
+shader_parameter/contrast = 1.2
+shader_parameter/shadow_lift = 0.1600000076
+shader_parameter/scanline_strength = 0.010000000475
+shader_parameter/grille_strength = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_strength = 0.1
+shader_parameter/noise_strength = 0.0
+shader_parameter/noise_speed = 0.0
+shader_parameter/base_jitter_px = 0.4
+shader_parameter/base_jitter_speed = 10.0
+shader_parameter/glitchiness = 0.0
+shader_parameter/glitch_rate = 0.0
+shader_parameter/glitch_shift_px = 0.0
+shader_parameter/glitch_window_min = 0.0
+shader_parameter/glitch_window_max = 0.0
+shader_parameter/blue_band_start_y = 0.0
+shader_parameter/blue_band_speed = 0.5
+shader_parameter/blue_band_width = 0.003
+shader_parameter/blue_band_strength = 0.01
+shader_parameter/blue_band_glitch = 0.0
+shader_parameter/blue_band_distort_px = 5.0
+
+[node name="Main" type="Node2D" unique_id=738257346]
+script = ExtResource("1_6q06x")
+
+[node name="MainBgCanvas" type="CanvasLayer" parent="." unique_id=661354684]
+unique_name_in_owner = true
+layer = -100
+
+[node name="MainBgColorRect" type="ColorRect" parent="MainBgCanvas" unique_id=707486060]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_btprj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1004791073]
+unique_name_in_owner = true
+environment = SubResource("Environment_07hio")
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=1973885650]
+unique_name_in_owner = true
+position = Vector2(640, 640)
+script = ExtResource("3_hujxm")
+
+[node name="PauseMenu" parent="." unique_id=2063299022 instance=ExtResource("5_b1x3f")]
+visible = false
+
+[node name="CRTCanvas" type="CanvasLayer" parent="." unique_id=1838540592]
+unique_name_in_owner = true
+layer = 100
+
+[node name="CRTColorRect" type="ColorRect" parent="CRTCanvas" unique_id=1144314479]
+unique_name_in_owner = true
+light_mask = 0
+visibility_layer = 512
+material = SubResource("ShaderMaterial_th32y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+metadata/_edit_use_anchors_ = true

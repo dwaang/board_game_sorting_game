@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://df02vhinmdmob"]
+
+[ext_resource type="Script" uid="uid://glk5cnxttqrt" path="res://scripts/main/pause_menu.gd" id="1_sk2tr"]
+[ext_resource type="Theme" uid="uid://cejti4dhwpmp5" path="res://themes/standart_ui_theme.tres" id="2_07hio"]
+[ext_resource type="PackedScene" uid="uid://dxn155xsoqpol" path="res://scenes/general/standart_button.tscn" id="2_qtr6c"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=2095095696]
+process_mode = 3
+layer = 100
+script = ExtResource("1_sk2tr")
+
+[node name="ControlNode" type="Control" parent="." unique_id=1559386404]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_behavior_recursive = 2
+theme = ExtResource("2_07hio")
+
+[node name="BGColorRect" type="ColorRect" parent="ControlNode" unique_id=57410516]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="ContentHBoxContainer" type="HBoxContainer" parent="ControlNode" unique_id=1788259409]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -76.0
+offset_right = 160.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 128
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer" unique_id=2025869753]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+mouse_behavior_recursive = 1
+alignment = 1
+
+[node name="GameBtn" parent="ControlNode/ContentHBoxContainer/ButtonsContainer" unique_id=2033958526 instance=ExtResource("2_qtr6c")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+text = "BACK"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="MainMenuBtn" parent="ControlNode/ContentHBoxContainer/ButtonsContainer" unique_id=1044193904 instance=ExtResource("2_qtr6c")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+text = "MAIN_MENU"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="ChangeLangBtn" parent="ControlNode/ContentHBoxContainer/ButtonsContainer" unique_id=1712458592 instance=ExtResource("2_qtr6c")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+text = "CHANGE_LANG"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="QuitBtn" parent="ControlNode/ContentHBoxContainer/ButtonsContainer" unique_id=306332207 instance=ExtResource("2_qtr6c")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 128)
+layout_mode = 2
+text = "QUIT"
+start_anim_type = 2
+end_anim_type = 2
+
+[node name="VolumePanelContainer" type="PanelContainer" parent="ControlNode/ContentHBoxContainer" unique_id=219593567]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="VolumeVBoxContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer" unique_id=2077162039]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="VolumesLabel" type="RichTextLabel" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer" unique_id=1938949089]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "VOLUMES"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer" unique_id=1174849534]
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="MusicContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=1015514701]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="MusicVolumeLabel" type="RichTextLabel" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer" unique_id=387906762]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "MUSIC"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MusicHSlider" type="HSlider" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer" unique_id=1228209764]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="SFXContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=1007908066]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="SFXLabel" type="RichTextLabel" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer" unique_id=1279083583]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "SFX"
+fit_content = true
+autowrap_mode = 0
+
+[node name="SFXHSlider" type="HSlider" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer" unique_id=1739977767]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="UIContainer" type="VBoxContainer" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer" unique_id=214646660]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_constants/separation = 0
+
+[node name="UILabel" type="RichTextLabel" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer" unique_id=1689744107]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+bbcode_enabled = true
+text = "UI"
+fit_content = true
+autowrap_mode = 0
+
+[node name="UIHSlider" type="HSlider" parent="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer" unique_id=1023697217]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(384, 32)
+layout_mode = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[connection signal="pressed" from="ControlNode/ContentHBoxContainer/ButtonsContainer/GameBtn" to="." method="_on_game_btn_pressed"]
+[connection signal="pressed" from="ControlNode/ContentHBoxContainer/ButtonsContainer/MainMenuBtn" to="." method="_on_main_menu_btn_pressed" flags=3]
+[connection signal="pressed" from="ControlNode/ContentHBoxContainer/ButtonsContainer/ChangeLangBtn" to="." method="_on_change_lang_btn_pressed"]
+[connection signal="pressed" from="ControlNode/ContentHBoxContainer/ButtonsContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="value_changed" from="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/MusicContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/SFXContainer/SFXHSlider" to="." method="_on_sfxh_slider_value_changed"]
+[connection signal="value_changed" from="ControlNode/ContentHBoxContainer/VolumePanelContainer/VolumeVBoxContainer/VBoxContainer/UIContainer/UIHSlider" to="." method="_on_uih_slider_value_changed"]

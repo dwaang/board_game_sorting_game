@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dxn155xsoqpol"]
+
+[ext_resource type="Theme" uid="uid://cejti4dhwpmp5" path="res://themes/standart_ui_theme.tres" id="1_ib0l6"]
+[ext_resource type="Script" uid="uid://dhfw6regk5dpt" path="res://scripts/general/standart_button.gd" id="2_ib0l6"]
+
+[node name="StandartButton" type="Button" unique_id=2033958526]
+custom_minimum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_ib0l6")
+text = "B"
+script = ExtResource("2_ib0l6")

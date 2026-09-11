@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bqiy8ovwk0t5k"]
+
+[ext_resource type="Script" uid="uid://b3dvbdqtspijm" path="res://scripts/skill_tree/skill_tree.gd" id="1_ty3n3"]
+[ext_resource type="PackedScene" uid="uid://uf6kichf72p3" path="res://scenes/skill_tree/skill_node.tscn" id="2_qyvaf"]
+
+[node name="SkillTree" type="Node2D" unique_id=645551293 node_paths=PackedStringArray("main_skillnode")]
+script = ExtResource("1_ty3n3")
+main_skillnode = NodePath("MainSkillNode")
+
+[node name="MainSkillNode" parent="." unique_id=1520642554 instance=ExtResource("2_qyvaf")]
+position = Vector2(61, 75)
+title = "TEST"
+effect_value = 2
+max_level = 10
+
+[node name="MainSkillNode2" parent="MainSkillNode" unique_id=1435766557 instance=ExtResource("2_qyvaf")]
+position = Vector2(232, 56)
+title = "TEST"
+effect_value = 2
+max_level = 10
